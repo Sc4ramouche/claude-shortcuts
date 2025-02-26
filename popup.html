@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 240px;
+      padding: 8px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    input {
+      width: 100%;
+      padding: 4px;
+      box-sizing: border-box;
+      font-size: 12px;
+    }
+    button {
+      background-color: #5436DA;
+      color: white;
+      border: none;
+      padding: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .status {
+      color: green;
+      font-size: 11px;
+      height: 15px;
+    }
+    .shortcut {
+      font-size: 11px;
+      color: #666;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="text" id="orgId" placeholder="Enter Claude organization ID">
+    <button id="saveBtn">Save</button>
+    <div class="status" id="status"></div>
+    <div class="shortcut">Shortcut: Alt+N to delete the current thread and start anew</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
