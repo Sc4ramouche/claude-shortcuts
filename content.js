@@ -10,6 +10,7 @@ document.addEventListener("keydown", function (event) {
     const chatId = chatIdMatch ? chatIdMatch[1] : null;
 
     if (chatId) {
+      window.location.href = "https://claude.ai/new";
       chrome.storage.local.get(["orgId"], function (result) {
         const orgId = result.orgId;
         if (!orgId) {
@@ -28,13 +29,9 @@ document.addEventListener("keydown", function (event) {
             },
             credentials: "include",
           },
-        )
-          .then(() => {
-            window.location.href = "https://claude.ai/new";
-          })
-          .catch(() => {
-            console.error("Failed with chatId:", chatId);
-          });
+        ).catch(() => {
+          console.error("Failed with chatId:", chatId);
+        });
       });
     } else {
       console.log("No chat ID present.");
