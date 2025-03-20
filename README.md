@@ -1,7 +1,7 @@
 A set of shortcuts to make interaction with Claude web UI more keyboard-oriented.
 
-* Alt+N to start a new thread.
-* Alt+D to delete the current thread and start a new one.
+* ⌥-N to start a new thread.
+* ⌥-D to delete the current thread and start a new one.
 
 To load the extension from sources in Chrome:
 
