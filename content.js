@@ -1,5 +1,5 @@
 document.addEventListener("keydown", function (event) {
-  if (event.altKey && event.code === "KeyN") {
+  if (event.altKey && event.code === "KeyD") {
     event.preventDefault();
 
     if (!window.location.href.includes("claude.ai")) {
@@ -37,5 +37,8 @@ document.addEventListener("keydown", function (event) {
       console.log("No chat ID present.");
       return;
     }
+  }
+  if (event.altKey && event.code === "KeyN") {
+    window.location.href = "https://claude.ai/new";
   }
 });
